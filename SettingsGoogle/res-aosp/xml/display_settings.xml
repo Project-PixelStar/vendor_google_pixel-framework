@@ -128,16 +128,6 @@
             settings:keywords="@string/keywords_color_mode" />
 
     </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/photos_pref">
-
-        <com.android.settings.custom.preference.SystemPropertySwitchPreference
-            android:key="persist.sys.pixelprops.gphotos"
-            android:title="@string/unlimited_photos_storage_title"
-            android:summary="@string/unlimited_photos_storage_summary"
-            android:defaultValue="true"/>
-    </PreferenceCategory>
     
     <!-- <PreferenceCategory
         android:title="@string/touch_category_title">
@@ -176,12 +166,12 @@
             android:fragment="com.android.settings.display.RefreshRateSettings"
             settings:keywords="@string/keywords_refresh_rate"
             settings:controller="com.android.settings.display.RefreshRatePreferenceController"/>
-
+<!-- 
         <SwitchPreferenceCompat
             android:key="peak_refresh_rate"
             android:summary="@string/peak_refresh_rate_summary"
             android:title="@string/peak_refresh_rate_title"
-            settings:controller="com.android.settings.display.PeakRefreshRatePreferenceController" />
+            settings:controller="com.android.settings.display.PeakRefreshRatePreferenceController" /> -->
 
         <com.android.settings.custom.preference.SystemSettingListPreference
             android:key="display_cutout_hidden"
