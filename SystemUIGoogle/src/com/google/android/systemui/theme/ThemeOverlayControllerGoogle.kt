@@ -41,6 +41,7 @@ import com.android.systemui.theme.ThemeOverlayApplier
 import com.android.systemui.theme.ThemeOverlayController
 import com.android.systemui.util.settings.SecureSettings
 import com.android.systemui.util.kotlin.JavaAdapter
+import com.android.systemui.tuner.TunerService;
 import java.util.concurrent.Executor
 import javax.inject.Inject
 
@@ -66,6 +67,7 @@ class ThemeOverlayControllerGoogle @Inject constructor(
     uiModeManager: UiModeManager,
     activityManager: ActivityManager,
     configurationController: ConfigurationController,
+    tunerService: TunerService,
     @param:Main private val mainResources: Resources,
     private val systemPropertiesHelper: SystemPropertiesHelper
 ) : ThemeOverlayController(
@@ -88,7 +90,8 @@ class ThemeOverlayControllerGoogle @Inject constructor(
     keyguardTransitionInteractor,
     uiModeManager,
     activityManager,
-    configurationController
+    configurationController,
+    tunerService
 ) {
     init {
         configurationController.addCallback(object :
