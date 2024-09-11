@@ -204,6 +204,10 @@
             android:title="@string/lift_to_wake_title" />
 
         <SwitchPreferenceCompat
+            android:key="enable_blurs_on_windows"
+            android:title="@string/window_blurs"/>
+
+        <SwitchPreferenceCompat
             android:key="tap_to_wake"
             android:summary="@string/tap_to_wake_summary"
             android:title="@string/tap_to_wake" />
@@ -229,6 +233,13 @@
             android:defaultValue="false"
             settings:controller="com.android.settings.custom.touch.HighTouchSensitivitySettingsPreferenceController" />
 
+        <SwitchPreferenceCompat
+            android:key="touch_sensitivity"
+            android:title="@string/touch_sensitivity_title"
+            android:summary="@string/touch_sensitivity_summary"
+            settings:controller="com.google.android.settings.touch.TouchSensitivityPreferenceController"
+            settings:keywords="@string/keywords_touch_sensitivity" />
+            
         <ListPreference
             android:key="theme"
             android:summary="@string/summary_placeholder"
